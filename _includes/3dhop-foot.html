@@ -1,0 +1,42 @@
+<!-- 3DHOP initialization -->
+<script type="text/javascript">
+var presenter = null;
+
+function setup3dhop() { 
+	presenter = new Presenter("draw-canvas");
+
+	presenter.setScene({
+		meshes: {
+            "mesh_1" : { url: "{{ include.model_url }}" }
+		},
+		modelInstances : {
+			"model_1" : { mesh : "mesh_1" }
+		},
+		trackball: { 
+			type : TurnTableTrackball,
+			trackOptions : {
+				startPhi: 35.0,
+				startTheta: 15.0,
+				startDistance: 2.5,
+				minMaxPhi: [-180, 180],
+				minMaxTheta: [-30.0, 70.0],
+				minMaxDist: [0.5, 3.0]
+			}
+		}
+	});
+}
+
+function actionsToolbar(action) {
+	if(action=='home') presenter.resetTrackball(); 
+	else if(action=='zoomin') presenter.zoomIn();
+	else if(action=='zoomout') presenter.zoomOut(); 
+	else if(action=='light' || action=='light_on') { presenter.enableLightTrackball(!presenter.isLightTrackballEnabled()); lightSwitch(); } 
+	else if(action=='full'  || action=='full_on') fullscreenSwitch(); 
+}
+
+$(document).ready(function(){
+	init3dhop();
+
+	setup3dhop();
+});
+</script>

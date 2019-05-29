@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<article>
+    <h1>{{ page.title }}</h1>
+    <div class="content">
+        {{ page.model }}
+        <div id="3dhop" class="tdhop" onmousedown="if (event.preventDefault) event.preventDefault()"><div id="tdhlg"></div>
+ <div id="toolbar">
+  <img id="home"     title="Home"                  src="{{ site.baseurl }}/3dhop/skins/dark/home.png"            /><br/>
+  <img id="zoomin"   title="Zoom In"               src="{{ site.baseurl }}/3dhop/skins/dark/zoomin.png"          /><br/>
+  <img id="zoomout"  title="Zoom Out"              src="{{ site.baseurl }}/3dhop/skins/dark/zoomout.png"         /><br/>
+  <img id="light_on" title="Disable Light Control" src="{{ site.baseurl }}/3dhop/skins/dark/lightcontrol_on.png" style="position:absolute; visibility:hidden;"/>
+  <img id="light"    title="Enable Light Control"  src="{{ site.baseurl }}/3dhop/skins/dark/lightcontrol.png"    /><br/>
+  <img id="full_on"  title="Exit Full Screen"      src="{{ site.baseurl }}/3dhop/skins/dark/full_on.png"         style="position:absolute; visibility:hidden;"/>
+  <img id="full"     title="Full Screen"           src="{{ site.baseurl }}/3dhop/skins/dark/full.png"            />
+ </div>
+ <canvas id="draw-canvas" style="background-image: url({{ site.baseurl }}/3dhop/skins/backgrounds/light.jpg)"/>
+</div>
+        {{ content }}
+    </div>
+</article>

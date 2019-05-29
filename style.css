@@ -1,0 +1,17 @@
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    background: #eee;
+}
+
+body {
+    background: #fff;
+    width: 900px !important;
+    padding: 20px;
+    margin: 0 auto !important;
+    box-shadow: 0 0 20px rgba(0,0,0,.125);
+}

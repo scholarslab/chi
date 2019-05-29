@@ -1,0 +1,8 @@
+title: Cultural Heritage Informatics
+baseurl: "/chi"
+incremental: true
+collections_dir: collections
+collections:
+  records:
+    output: true
+    permalink: /:collection/:slug/

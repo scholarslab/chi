@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ site.title }}</title>
+    <link rel="stylesheet" href="{{ site.baseurl }}/style.css">
+{% if page.model != blank %}
+{% include 3dhop-head.html %}
+{% endif %}
+</head>
+<body>
+    <header role="banner" id="banner">
+        <h1>{{ site.title }}</h1>
+    </header>
+    <main id="main" role="main">
+        {{ content }}
+    </main>
+{% if page.model != blank %}
+{% include 3dhop-foot.html model_url=page.model %}
+{% endif %}
+</body>
+</html>
